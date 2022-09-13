@@ -1,202 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <title>띵동코딩-부트스트랩_파타고니아</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>결혼 청첩장</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
         * {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'IBM Plex Sans KR', sans-serif;
         }
-        body,h1,h2,h3,p,a {
-            font-weight: normal;
-            margin: 0;
-            padding: 0;
+        body, h1, h2, h3, p, a {
+            font-size: 16px;
+            margin: 0px;
+            padding: 0px;
             text-decoration: none;
+            font-weight: normal;
+        }
+        .wrap {
+            width: 350px;
+            margin: auto;
         }
 
-        .up {
-            background-color: #500778;
-            height: 50px;
+        .wrap > h1 {
+            background-color: pink;
+            color: white;
 
+            font-weight: 500;
+
+            padding: 16px;
+        }
+        
+        .pic {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        .up > a:first-child {
-            margin-left: auto;
+        .text_1 {
+            color: pink;
+
+            margin-top: 30px;
+
+            letter-spacing: 5px;
         }
 
-        .up > a:last-child {
-            margin-right: 20px;
+        .text_2 {
+            color: pink;
+
+            letter-spacing: 3px;
         }
 
-        .up > a {
+        .pic > img {
+            width: 250px;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            border: solid pink;
+
+        }
+
+        .name > p {
+            color: pink;
+            font-size: 24px;
+            font-weight: 500;
+            border-top: 1px solid pink;
+            border-bottom: 1px solid pink;
+            width: 200px;
+            margin: 30px auto 30px auto;
+            text-align: center;
+        }
+
+        .main {
+            background-color: pink;
+        }
+    
+        .text_3 {
+            text-align: center;
+
             color: white;
-            margin-right: 10px;
+            font-size: 20px;
+            padding-top: 20px;
+
         }
 
-        .up > span {
+        .text_4 {
             color: white;
-            margin-right: 10px;
+
+            padding-left: 20px;
+
+            line-height: 30px;
+
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        .down {
-            height: 70px;
+        .text_5 {
+            text-align: center;
 
+            color: white;
+
+            padding-bottom: 20px;
+        }
+
+        .bottom {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        .down > img {
-            width: 130px;
-            margin-left: 20px;
+        .bottom > p {
+            color: pink;
+            font-weight: 500;
+
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
 
-        .down > a {
-            margin-left: 80px;
-            font-weight: 900;
-            color: black;
+        .bottom > input {
+            width: 250px;
+
+            margin-bottom: 10px;
         }
 
-        .down > form {
-            margin-left: 80px;
-            margin-right: auto;
-            width: 500px;
+        .bottom > textarea {
+            width: 250px;
+
+            margin-bottom: 10px;
         }
 
-        .icons {
-            font-size: 24px;
-        }
+        .bottom > button {
+            background-color: pink;
+            color: white;
 
-        .icons > i {
-            margin-right: 20px;
-        }
+            width: 150px;
+            height: 40px;
 
-        .main > img {
-            width: 100%;
-        }
-
-        .items {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            padding: 30px;
-        }
-
-        .imgs {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-
-            margin-right: auto;
-            margin-left: 100px;
-        }
-
-        .card {
-            margin-right: 10px;
-        }
-
-        .list-group > span {
-            font-size: 24px;
-            margin-left: 10px;
-        }
-
-        .form-select {
-            width: 120px
+            border: none;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="gnb">
-		<div class="up">
-            <a href="#">Climate Goals</a>
-            <a href="#">푸른 심장</a>
-            <a href="#">Worn Wear</a>
-            <span>|</span>
-            <a href="#">더보기</a>
+    <div class="wrap">
+        <h1>영희와 철수의 첫 시작을 축하해주세요</h1>
+        <div class="pic">
+            <p class="text_1">Save The Date</p>
+            <img src="image (4).png">
+            <p class="text_2">12.31.SUNDAY.PM.12:30</p>
         </div>
-        <div class="down">
-            <img src="https://media-sparta.s3.ap-northeast-2.amazonaws.com/media/images/patagonia_main_logo.png">
-            <a href="#">SHOP</a>
-            <a href="#">INSIDE PATAGONIA</a>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <div class="icons">
-                <i class="bi bi-question-circle-fill"></i>
-                <i class="bi bi-person-fill"></i>
-                <i class="bi bi-cart-fill"></i>
-            </div>
+        <div class="name">
+            <p>김영희 & 이철수</p>
         </div>
-    </div>
-    <div class="main">
-		<img src="https://media-sparta.s3.ap-northeast-2.amazonaws.com/media/images/patagonia_main_banner.png">
-    </div>
-    <div class="items">
-		<ul class="list-group list-group-flush">
-            <span>WOMEN'S</span>
-            <li class="list-group-item">신상품</li>
-            <li class="list-group-item">재킷 & 베스트</li>
-            <li class="list-group-item">플리스</li>
-            <li class="list-group-item">스웨트셔츠 & 후디</li>
-            <li class="list-group-item">셔츠</li>
-            <li class="list-group-item">티셔츠</li>
-            <li class="list-group-item">팬츠 & 레깅스</li>
-            <li class="list-group-item">모자 & 액세서리</li>
-        </ul>
-        <div class="imgs">
-            <div class="card" style="width: 18rem;">
-                <img src="https://media-sparta.s3.ap-northeast-2.amazonaws.com/media/images/patagonia_item_1.png"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">
-                        <span>Women Stand Up Overalls</span></br>
-                        <span>₩159,000</span>
-                    </p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="https://media-sparta.s3.ap-northeast-2.amazonaws.com/media/images/patagonia_item_2.png"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">
-                        <span>Women Ridge Flow Shirt</span></br>
-                        <span>₩89,000</span>
-                    </p>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="https://media-sparta.s3.ap-northeast-2.amazonaws.com/media/images/patagonia_item_3.png"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">
-                        <span>Women All Seasons Hemp Canvas Shorts</span></br>
-                        <span>₩119,000</span>
-                    </p>
-                </div>
-            </div>
+        <div class="main">
+            <p class="text_3">INVITATION</p>
+            <p class="text_4">
+                서로 다른 두 사람이 만나</br>
+                사랑으로 하나 되는 자리에</br>
+                소중한 여러분들을 초대합니다.</br>
+                기쁠 때나, 슬플 때나</br>
+                서로를 사랑으로 품으며</br>
+                행복의 계단을 쌓아가겠습니다.</br>
+                저희의 첫 시작을 함께 해주신다면</br>
+                감사한 마음 깊이 간직하며 잘 살겠습니다.</br>
+            </p>
+            <p class="text_5">
+                2023. 12. 31. SUN. PM 12:30</br>
+                스파르타웨딩 르탄홀
+            </p>
         </div>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>상품정렬</option>
-            <option value="1">최신순</option>
-            <option value="2">높은 가격순</option>
-            <option value="3">낮은 가격순</option>
-          </select>
+        <div class="bottom">
+            <p>축하메시지를 남겨주세요</p>
+            <input type="text" placeholder="이름">
+            <textarea class="form-control" placeholder="메시지를 남겨주세요" id="comment"
+                style="height: 100px"></textarea>
+            <button>메시지 남기기</button>
+        </div>
     </div>
 </body>
 </html>
